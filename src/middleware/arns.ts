@@ -109,7 +109,7 @@ export const createArnsMiddleware = ({
     res.header(headerNames.arnsIndex, index.toString());
 
     // handle undername limit exceeded
-    if (index > limit) {
+    if (config.ARNS_RESOLVER_ENFORCE_UNDERNAME_LIMIT && index > limit) {
       sendPaymentRequired(
         res,
         'ArNS undername limit exceeded. Purchase additional undernames to continue.',
