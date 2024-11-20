@@ -310,7 +310,7 @@ export const ARNS_RESOLVER_OVERRIDE_TTL_SECONDS_STRING = env.varOrUndefined(
 );
 
 export const ARNS_RESOLVER_ENFORCE_UNDERNAME_LIMIT =
-  env.varOrDefault('ARNS_RESOLVER_ENFORCE_UNDERNAME_LIMIT', 'true') === 'true';
+  env.varOrDefault('ARNS_RESOLVER_ENFORCE_UNDERNAME_LIMIT', 'false') === 'true';
 
 export const ARNS_RESOLVER_OVERRIDE_TTL_SECONDS =
   ARNS_RESOLVER_OVERRIDE_TTL_SECONDS_STRING !== undefined
